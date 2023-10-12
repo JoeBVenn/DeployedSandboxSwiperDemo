@@ -1,0 +1,160 @@
+html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+
+    body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    .newSwiper-contain {
+        display: flex;
+        height: 100%;
+        align-items: center;
+        margin-bottom: 3rem;
+    }
+
+    .new-swiper {
+        height: auto;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @media(min-width: 768px) {
+            height: 80vh;
+        }
+
+        .swiper {
+            overflow-y: visible;
+        }
+    }
+
+    // @media(max-width: 992px) {
+    //     .swiper-slide {
+    //         margin-top: 0 !important;
+    //     }
+    //     .swiper-slide:nth-of-type(even) {
+    //         margin-top: 20px !important;
+    //     }
+    // }
+    
+
+    .swiper {
+      width: 100%;
+      height: 100%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .swiper-slide {
+        border: 4px solid black;
+        position: relative;
+      text-align: left;
+      font-size: 18px;
+      background: #ffffffce;
+      height: calc((100% - 30px) / 2) !important;
+      /* Center slide text vertically */
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-direction: column;
+      padding: 1rem;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        .title {
+            color: rgb(45, 45, 169);
+        }
+        .swiper-link {
+            span {
+                color: rgb(45, 45, 169);
+            }
+        }
+      }
+
+      .item-link-wrapper {
+        text-decoration: none;
+        color: black;
+        height: 100%;
+      }
+
+      .swiper-link {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        width: 15%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        span {
+            width: 100%;
+            transform: rotate(90deg);
+        }
+      }
+    }
+
+    .swiper-link {
+        border: none;
+        border-radius: 0;
+        &:hover {
+            background-color: azure;
+        }
+    }
+
+    .swiper-slide p {
+        font-size: 0.8rem;
+        max-width: 85%;
+        margin-bottom: 0.5rem;
+    }
+
+    .swiper-slide .item-link-wrapper .title {
+        font-weight: bold;
+        font-size: 1rem;
+    }
+
+
+    .swiper-pagination {
+        bottom: -20px !important;
+
+        .swiper-pagination-bullet {
+            background: white;
+
+            &.swiper-pagination-bullet-active {
+                background: blue;
+            }
+        }
+    }
+
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 2rem;
+    }
+
+    .header h1 {
+        color: white;
+        font-weight: bold;
+    }
+
+    .header div {
+        display: flex;
+        align-items: center;
+    }
+
+    .wrapper {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        background: url(../img/swiperbg.jpg) no-repeat center center/cover;
+    }
